@@ -45,7 +45,7 @@ docker run dalefixter/robot-framework/westwing:latest
 
 5) You can proceed to run the robot tests, run the following command in the Powershell:
 
-docker run -v {$file folder where you want to place reports}:/opt/robotframework/reports:Z -v {$file folder of the testcases folder in this test pack}:/opt/robotframework/tests:Z -v {$file folder of the Resources folder in this test pack}:/opt/robotframework/Resources:Z -v {$file folder of the PageObjects folder in this test pack}:/opt/robotframework/PageObjects:Z -e BROWSER=chrome dalefixter/robot-framework/westwing:latest
+docker run -v {$file folder where you want to place reports}:/opt/robotframework/reports:Z -v {$file folder of the testcases folder in this test pack}:/opt/robotframework/tests:Z -v {$file folder of the Resources folder in this test pack}:/opt/robotframework/Resources:Z -v {$file folder of the PageObjects folder in this test pack}:/opt/robotframework/PageObjects:Z -e BROWSER=chrome dalefixter/robot-framework/westwing
 
 replace {$file folder****} with the local path of the same folder on your local machine.
 
@@ -80,7 +80,7 @@ It is possible to parallelise the execution of your test suites. Simply define t
 
     docker run \
         -e ROBOT_THREADS=4 \
-        ppodgorsek/robot-framework:latest
+        dalefixter/robot-framework/westwing:latest
 
 By default, there is no parallelisation.
 
@@ -91,7 +91,7 @@ When using parallelisation, it is possible to pass additional [pabot options](ht
     docker run \
         -e ROBOT_THREADS=4 \
         -e PABOT_OPTIONS="--testlevelsplit" \
-        ppodgorsek/robot-framework:latest
+        dalefixter/robot-framework/westwing:latest
 
 ### Passing additional options
 
@@ -99,7 +99,7 @@ RobotFramework supports many options such as `--exclude`, `--variable`, `--logle
 
     docker run \
         -e ROBOT_OPTIONS="--loglevel DEBUG" \
-        ppodgorsek/robot-framework:latest
+        dalefixter/robot-framework/westwing:latest
 
 ### Testing emails
 
@@ -115,7 +115,7 @@ To set the timezone used inside the Docker image, you can set the `TZ` environme
 
     docker run \
         -e TZ=America/New_York \
-        ppodgorsek/robot-framework:latest
+        dalefixter/robot-framework/westwing:latest
 
 ## Security consideration
 
@@ -123,7 +123,7 @@ By default, containers are implicitly run using `--user=1000:1000`, please remem
 
     docker run \
         --user=1001:1001 \
-        ppodgorsek/robot-framework:latest
+        dalefixter/robot-framework/westwing:latest
 
 Remember that that UID/GID should be allowed to access the mounted volumes in order to read the test suites and to write the output.
 
@@ -185,7 +185,7 @@ It can simply be passed during the execution, such as:
 
     docker run \
         -e ROBOT_TEST_RUN_ID="feature/branch-name" \
-        ppodgorsek/robot-framework:latest
+        dalefixter/robot-framework/westwing:latest
 
 By default, the test run ID is empty.
 
