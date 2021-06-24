@@ -1,8 +1,8 @@
-# WestWingNow UI Test Suite - Robot Framework in Docker Alpine, with Firefox and Chrome
+# UI Test Suite - Robot Framework in Docker Alpine, with Firefox and Chrome
 
 ## What is it? :question:
  
-This project consists of a Docker image :whale2: containing a complete Robot Framework :robot: installation, and a UI test suite for WestWingNow, running on Alpine Linux :rocket:, a lightweight linux distro.
+This project consists of a Docker image :whale2: containing a complete Robot Framework :robot: installation, and a sample UI test suite for eCommerce website, running on Alpine Linux :rocket:, a lightweight linux distro.
 
 This installation also contains Firefox, Chrome and the Selenium library for Robot Framework.
 
